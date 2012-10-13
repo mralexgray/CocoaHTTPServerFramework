@@ -6,8 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		270B11A91628E667005A82FA /* CocoaHTTPServerIOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 270B11AA1628E667005A82FA /* Build configuration list for PBXAggregateTarget "CocoaHTTPServerIOS" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = CocoaHTTPServerIOS;
+			productName = CocoaHTTPServerIOS;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		270B11941628E5A8005A82FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B11931628E5A8005A82FA /* Foundation.framework */; };
+		270B11B41628E676005A82FA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B11B31628E676005A82FA /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +39,11 @@
 /* Begin PBXFileReference section */
 		270B11901628E5A8005A82FA /* libCocoaHTTPServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaHTTPServer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		270B11931628E5A8005A82FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		270B11B21628E676005A82FA /* CocoaHTTPServerOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaHTTPServerOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		270B11B31628E676005A82FA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		270B11B61628E676005A82FA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		270B11B71628E676005A82FA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		270B11B81628E676005A82FA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +52,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				270B11941628E5A8005A82FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270B11AE1628E676005A82FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270B11B41628E676005A82FA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				270B11901628E5A8005A82FA /* libCocoaHTTPServer.a */,
+				270B11B21628E676005A82FA /* CocoaHTTPServerOSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,16 +87,38 @@
 			isa = PBXGroup;
 			children = (
 				270B11931628E5A8005A82FA /* Foundation.framework */,
+				270B11B31628E676005A82FA /* Cocoa.framework */,
+				270B11B51628E676005A82FA /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		270B11B51628E676005A82FA /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				270B11B61628E676005A82FA /* AppKit.framework */,
+				270B11B71628E676005A82FA /* CoreData.framework */,
+				270B11B81628E676005A82FA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		270B11AF1628E676005A82FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		270B118F1628E5A8005A82FA /* CocoaHTTPServer */ = {
+		270B118F1628E5A8005A82FA /* CocoaHTTPServerStaticIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 270B119E1628E5A8005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServer" */;
+			buildConfigurationList = 270B119E1628E5A8005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServerStaticIOS" */;
 			buildPhases = (
 				270B118C1628E5A8005A82FA /* Sources */,
 				270B118D1628E5A8005A82FA /* Frameworks */,
@@ -78,10 +128,28 @@
 			);
 			dependencies = (
 			);
-			name = CocoaHTTPServer;
+			name = CocoaHTTPServerStaticIOS;
 			productName = CocoaHTTPServer;
 			productReference = 270B11901628E5A8005A82FA /* libCocoaHTTPServer.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		270B11B11628E676005A82FA /* CocoaHTTPServerOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 270B11C31628E676005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServerOSX" */;
+			buildPhases = (
+				270B11AD1628E676005A82FA /* Sources */,
+				270B11AE1628E676005A82FA /* Frameworks */,
+				270B11AF1628E676005A82FA /* Headers */,
+				270B11B01628E676005A82FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaHTTPServerOSX;
+			productName = CocoaHTTPServerOSX;
+			productReference = 270B11B21628E676005A82FA /* CocoaHTTPServerOSX.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -104,13 +172,32 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				270B118F1628E5A8005A82FA /* CocoaHTTPServer */,
+				270B118F1628E5A8005A82FA /* CocoaHTTPServerStaticIOS */,
+				270B11A91628E667005A82FA /* CocoaHTTPServerIOS */,
+				270B11B11628E676005A82FA /* CocoaHTTPServerOSX */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		270B11B01628E676005A82FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		270B118C1628E5A8005A82FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		270B11AD1628E676005A82FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,6 +277,70 @@
 			};
 			name = Release;
 		};
+		270B11AB1628E667005A82FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		270B11AC1628E667005A82FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		270B11C41628E676005A82FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaHTTPServerOSX/CocoaHTTPServerOSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CocoaHTTPServerOSX/CocoaHTTPServerOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		270B11C51628E676005A82FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaHTTPServerOSX/CocoaHTTPServerOSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "CocoaHTTPServerOSX/CocoaHTTPServerOSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -202,7 +353,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		270B119E1628E5A8005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServer" */ = {
+		270B119E1628E5A8005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServerStaticIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				270B119F1628E5A8005A82FA /* Debug */,
@@ -210,6 +361,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		270B11AA1628E667005A82FA /* Build configuration list for PBXAggregateTarget "CocoaHTTPServerIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270B11AB1628E667005A82FA /* Debug */,
+				270B11AC1628E667005A82FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		270B11C31628E676005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServerOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270B11C41628E676005A82FA /* Debug */,
+				270B11C51628E676005A82FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
