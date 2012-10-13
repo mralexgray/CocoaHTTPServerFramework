@@ -1,5 +1,7 @@
 #import "HTTPServer.h"
-#import "GCDAsyncSocket.h"
+
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+
 #import "HTTPConnection.h"
 #import "WebSocket.h"
 #import "HTTPLogging.h"

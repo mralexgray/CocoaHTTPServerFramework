@@ -1,6 +1,8 @@
 #import "WebSocket.h"
+
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+
 #import "HTTPMessage.h"
-#import "GCDAsyncSocket.h"
 #import "DDNumber.h"
 #import "DDData.h"
 #import "HTTPLogging.h"
