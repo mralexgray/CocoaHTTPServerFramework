@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "270B11B11628E676005A82FA"
-               BuildableName = "CocoaHTTPServerOSX.framework"
+               BuildableName = "CocoaHTTPServer.framework"
                BlueprintName = "CocoaHTTPServerOSX"
                ReferencedContainer = "container:CocoaHTTPServer.xcodeproj">
             </BuildableReference>
@@ -38,7 +38,6 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <AdditionalOptions>
       </AdditionalOptions>

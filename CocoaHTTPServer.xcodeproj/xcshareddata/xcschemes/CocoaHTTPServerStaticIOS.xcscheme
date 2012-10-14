@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "270B118F1628E5A8005A82FA"
-               BuildableName = "libCocoaHTTPServerStaticIOS.a"
+               BuildableName = "libCocoaHTTPServer.a"
                BlueprintName = "CocoaHTTPServerStaticIOS"
                ReferencedContainer = "container:CocoaHTTPServer.xcodeproj">
             </BuildableReference>
@@ -38,7 +38,6 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
-      enableOpenGLFrameCaptureMode = "0"
       allowLocationSimulation = "YES">
       <AdditionalOptions>
       </AdditionalOptions>
