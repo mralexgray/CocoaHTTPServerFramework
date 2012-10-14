@@ -99,6 +99,8 @@
 		2769888A162B6A4000E0D45E /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27698889162B6A3700E0D45E /* CocoaLumberjack.framework */; };
 		276988A4162B6D2300E0D45E /* LICENSE.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 276988A3162B6D2300E0D45E /* LICENSE.txt */; };
 		276988A6162B6D3600E0D45E /* CocoaHTTPServer.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 276988A5162B6D3600E0D45E /* CocoaHTTPServer.txt */; };
+		276988CB162B6FFA00E0D45E /* CocoaHTTPServer.txt in Resources */ = {isa = PBXBuildFile; fileRef = 276988A5162B6D3600E0D45E /* CocoaHTTPServer.txt */; };
+		276988CC162B6FFC00E0D45E /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 276988A3162B6D2300E0D45E /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -558,7 +560,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276988CC162B6FFC00E0D45E /* LICENSE.txt in Resources */,
 				270B12661628EAEC005A82FA /* VERSION in Resources */,
+				276988CB162B6FFA00E0D45E /* CocoaHTTPServer.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
