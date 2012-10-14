@@ -107,8 +107,8 @@
 		270B126B1628EB18005A82FA /* CocoaLumberjack.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 270B125E1628EAE3005A82FA /* CocoaLumberjack.txt */; };
 		270B126C1628EB18005A82FA /* CocoaLumberjackFramework.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 270B125F1628EAE3005A82FA /* CocoaLumberjackFramework.txt */; };
 		270B126D1628EB18005A82FA /* VERSION in CopyFiles */ = {isa = PBXBuildFile; fileRef = 270B12651628EAEC005A82FA /* VERSION */; };
-		270B12961628ED6F005A82FA /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B12951628ED6F005A82FA /* CocoaLumberjack.framework */; };
-		270B12971628ED82005A82FA /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B127E1628EB33005A82FA /* CocoaAsyncSocket.framework */; };
+		2769887F162B6A1500E0D45E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B127E1628EB33005A82FA /* CocoaAsyncSocket.framework */; };
+		2769888A162B6A4000E0D45E /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27698889162B6A3700E0D45E /* CocoaLumberjack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +153,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 27FBB5001627668B0060C9AF;
 			remoteInfo = CocoaAsyncSocketIOS;
+		};
+		27698886162B6A3700E0D45E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2765C67C161CC34100E21ECB;
+			remoteInfo = CocoaLumberjackStaticIOS;
+		};
+		27698888162B6A3700E0D45E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2765C6CC161CCD2B00E21ECB;
+			remoteInfo = CocoaLumberjackOSX;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -225,7 +239,7 @@
 		270B125F1628EAE3005A82FA /* CocoaLumberjackFramework.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CocoaLumberjackFramework.txt; path = Licenses/CocoaLumberjackFramework.txt; sourceTree = "<group>"; };
 		270B12651628EAEC005A82FA /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		270B126E1628EB33005A82FA /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = Frameworks/CocoaAsyncSocket/CocoaAsyncSocket.xcodeproj; sourceTree = "<group>"; };
-		270B12951628ED6F005A82FA /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CocoaHTTPServer-enzpnsdpwdlfcmfvdlcoomqobbhk/Build/Products/Debug-iphoneos/CocoaLumberjack.framework"; sourceTree = "<group>"; };
+		27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaLumberjack.xcodeproj; path = Frameworks/CocoaAsyncSocket/Frameworks/CocoaLumberjack/CocoaLumberjack.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,8 +255,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				270B12971628ED82005A82FA /* CocoaAsyncSocket.framework in Frameworks */,
-				270B12961628ED6F005A82FA /* CocoaLumberjack.framework in Frameworks */,
+				2769888A162B6A4000E0D45E /* CocoaLumberjack.framework in Frameworks */,
+				2769887F162B6A1500E0D45E /* CocoaAsyncSocket.framework in Frameworks */,
 				270B11B41628E676005A82FA /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +286,7 @@
 		270B11921628E5A8005A82FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				270B12951628ED6F005A82FA /* CocoaLumberjack.framework */,
+				27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */,
 				270B126E1628EB33005A82FA /* CocoaAsyncSocket.xcodeproj */,
 				270B11931628E5A8005A82FA /* Foundation.framework */,
 				270B11B31628E676005A82FA /* Cocoa.framework */,
@@ -384,6 +398,15 @@
 			children = (
 				270B127C1628EB33005A82FA /* libCocoaAsyncSocket.a */,
 				270B127E1628EB33005A82FA /* CocoaAsyncSocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27698881162B6A3700E0D45E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27698887162B6A3700E0D45E /* libCocoaLumberjack.a */,
+				27698889162B6A3700E0D45E /* CocoaLumberjack.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -507,6 +530,10 @@
 					ProductGroup = 270B126F1628EB33005A82FA /* Products */;
 					ProjectRef = 270B126E1628EB33005A82FA /* CocoaAsyncSocket.xcodeproj */;
 				},
+				{
+					ProductGroup = 27698881162B6A3700E0D45E /* Products */;
+					ProjectRef = 27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -530,6 +557,20 @@
 			fileType = wrapper.framework;
 			path = CocoaAsyncSocket.framework;
 			remoteRef = 270B127D1628EB33005A82FA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27698887162B6A3700E0D45E /* libCocoaLumberjack.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCocoaLumberjack.a;
+			remoteRef = 27698886162B6A3700E0D45E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		27698889162B6A3700E0D45E /* CocoaLumberjack.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CocoaLumberjack.framework;
+			remoteRef = 27698888162B6A3700E0D45E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
