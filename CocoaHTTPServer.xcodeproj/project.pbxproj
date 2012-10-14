@@ -191,16 +191,16 @@
 		270B11D71628EA8C005A82FA /* DDNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNumber.m; sourceTree = "<group>"; };
 		270B11D81628EA8C005A82FA /* DDRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRange.h; sourceTree = "<group>"; };
 		270B11D91628EA8C005A82FA /* DDRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRange.m; sourceTree = "<group>"; };
-		270B11DA1628EA8C005A82FA /* HTTPAuthenticationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPAuthenticationRequest.h; sourceTree = "<group>"; };
-		270B11DB1628EA8C005A82FA /* HTTPAuthenticationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPAuthenticationRequest.m; sourceTree = "<group>"; };
-		270B11DC1628EA8C005A82FA /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection.h; sourceTree = "<group>"; };
-		270B11DD1628EA8C005A82FA /* HTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPConnection.m; sourceTree = "<group>"; };
-		270B11DE1628EA8C005A82FA /* HTTPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPLogging.h; sourceTree = "<group>"; };
-		270B11DF1628EA8C005A82FA /* HTTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPMessage.h; sourceTree = "<group>"; };
-		270B11E01628EA8C005A82FA /* HTTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPMessage.m; sourceTree = "<group>"; };
-		270B11E11628EA8C005A82FA /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
-		270B11E21628EA8C005A82FA /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPServer.h; sourceTree = "<group>"; };
-		270B11E31628EA8C005A82FA /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPServer.m; sourceTree = "<group>"; };
+		270B11DA1628EA8C005A82FA /* HTTPAuthenticationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPAuthenticationRequest.h; path = Core/HTTPAuthenticationRequest.h; sourceTree = "<group>"; };
+		270B11DB1628EA8C005A82FA /* HTTPAuthenticationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPAuthenticationRequest.m; path = Core/HTTPAuthenticationRequest.m; sourceTree = "<group>"; };
+		270B11DC1628EA8C005A82FA /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPConnection.h; path = Core/HTTPConnection.h; sourceTree = "<group>"; };
+		270B11DD1628EA8C005A82FA /* HTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPConnection.m; path = Core/HTTPConnection.m; sourceTree = "<group>"; };
+		270B11DE1628EA8C005A82FA /* HTTPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPLogging.h; path = Core/HTTPLogging.h; sourceTree = "<group>"; };
+		270B11DF1628EA8C005A82FA /* HTTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPMessage.h; path = Core/HTTPMessage.h; sourceTree = "<group>"; };
+		270B11E01628EA8C005A82FA /* HTTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPMessage.m; path = Core/HTTPMessage.m; sourceTree = "<group>"; };
+		270B11E11628EA8C005A82FA /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPResponse.h; path = Core/HTTPResponse.h; sourceTree = "<group>"; };
+		270B11E21628EA8C005A82FA /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPServer.h; path = Core/HTTPServer.h; sourceTree = "<group>"; };
+		270B11E31628EA8C005A82FA /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPServer.m; path = Core/HTTPServer.m; sourceTree = "<group>"; };
 		270B11E51628EA8C005A82FA /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartFormDataParser.h; sourceTree = "<group>"; };
 		270B11E61628EA8C005A82FA /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartFormDataParser.m; sourceTree = "<group>"; };
 		270B11E71628EA8C005A82FA /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeader.h; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 		270B11F31628EA8C005A82FA /* HTTPFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPFileResponse.m; sourceTree = "<group>"; };
 		270B11F41628EA8C005A82FA /* HTTPRedirectResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRedirectResponse.h; sourceTree = "<group>"; };
 		270B11F51628EA8C005A82FA /* HTTPRedirectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRedirectResponse.m; sourceTree = "<group>"; };
-		270B11F61628EA8C005A82FA /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
-		270B11F71628EA8C005A82FA /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocket.m; sourceTree = "<group>"; };
+		270B11F61628EA8C005A82FA /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocket.h; path = Core/WebSocket.h; sourceTree = "<group>"; };
+		270B11F71628EA8C005A82FA /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebSocket.m; path = Core/WebSocket.m; sourceTree = "<group>"; };
 		270B12651628EAEC005A82FA /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
 		270B126E1628EB33005A82FA /* CocoaAsyncSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket.xcodeproj; path = Frameworks/CocoaAsyncSocket/CocoaAsyncSocket.xcodeproj; sourceTree = "<group>"; };
 		27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaLumberjack.xcodeproj; path = Frameworks/CocoaAsyncSocket/Frameworks/CocoaLumberjack/CocoaLumberjack.xcodeproj; sourceTree = "<group>"; };
@@ -292,15 +292,6 @@
 		270B11CF1628EA8C005A82FA /* CocoaHTTPServer */ = {
 			isa = PBXGroup;
 			children = (
-				270B11D21628EA8C005A82FA /* Core */,
-			);
-			name = CocoaHTTPServer;
-			path = Frameworks/CocoaHTTPServer;
-			sourceTree = "<group>";
-		};
-		270B11D21628EA8C005A82FA /* Core */ = {
-			isa = PBXGroup;
-			children = (
 				270B11D31628EA8C005A82FA /* Categories */,
 				270B11DA1628EA8C005A82FA /* HTTPAuthenticationRequest.h */,
 				270B11DB1628EA8C005A82FA /* HTTPAuthenticationRequest.m */,
@@ -317,7 +308,8 @@
 				270B11F61628EA8C005A82FA /* WebSocket.h */,
 				270B11F71628EA8C005A82FA /* WebSocket.m */,
 			);
-			path = Core;
+			name = CocoaHTTPServer;
+			path = Frameworks/CocoaHTTPServer;
 			sourceTree = "<group>";
 		};
 		270B11D31628EA8C005A82FA /* Categories */ = {
@@ -330,7 +322,8 @@
 				270B11D81628EA8C005A82FA /* DDRange.h */,
 				270B11D91628EA8C005A82FA /* DDRange.m */,
 			);
-			path = Categories;
+			name = Categories;
+			path = Core/Categories;
 			sourceTree = "<group>";
 		};
 		270B11E41628EA8C005A82FA /* Mime */ = {
@@ -343,7 +336,8 @@
 				270B11E91628EA8C005A82FA /* MultipartMessageHeaderField.h */,
 				270B11EA1628EA8C005A82FA /* MultipartMessageHeaderField.m */,
 			);
-			path = Mime;
+			name = Mime;
+			path = Core/Mime;
 			sourceTree = "<group>";
 		};
 		270B11EB1628EA8C005A82FA /* Responses */ = {
@@ -360,7 +354,8 @@
 				270B11F41628EA8C005A82FA /* HTTPRedirectResponse.h */,
 				270B11F51628EA8C005A82FA /* HTTPRedirectResponse.m */,
 			);
-			path = Responses;
+			name = Responses;
+			path = Core/Responses;
 			sourceTree = "<group>";
 		};
 		270B12581628EAD1005A82FA /* Resources */ = {
