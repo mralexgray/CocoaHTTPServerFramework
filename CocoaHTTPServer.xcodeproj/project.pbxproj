@@ -827,6 +827,7 @@
 				270B11AC1628E667005A82FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		270B11C31628E676005A82FA /* Build configuration list for PBXNativeTarget "CocoaHTTPServerOSX" */ = {
 			isa = XCConfigurationList;
@@ -835,6 +836,7 @@
 				270B11C51628E676005A82FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
