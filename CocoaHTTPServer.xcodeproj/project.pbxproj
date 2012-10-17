@@ -57,18 +57,6 @@
 		270B12211628EA8C005A82FA /* HTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E21628EA8C005A82FA /* HTTPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		270B12221628EA8C005A82FA /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11E31628EA8C005A82FA /* HTTPServer.m */; };
 		270B12231628EA8C005A82FA /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11E31628EA8C005A82FA /* HTTPServer.m */; };
-		270B12241628EA8C005A82FA /* MultipartFormDataParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E51628EA8C005A82FA /* MultipartFormDataParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270B12251628EA8C005A82FA /* MultipartFormDataParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E51628EA8C005A82FA /* MultipartFormDataParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270B12261628EA8C005A82FA /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11E61628EA8C005A82FA /* MultipartFormDataParser.m */; };
-		270B12271628EA8C005A82FA /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11E61628EA8C005A82FA /* MultipartFormDataParser.m */; };
-		270B12281628EA8C005A82FA /* MultipartMessageHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E71628EA8C005A82FA /* MultipartMessageHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270B12291628EA8C005A82FA /* MultipartMessageHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E71628EA8C005A82FA /* MultipartMessageHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270B122A1628EA8C005A82FA /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11E81628EA8C005A82FA /* MultipartMessageHeader.m */; };
-		270B122B1628EA8C005A82FA /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11E81628EA8C005A82FA /* MultipartMessageHeader.m */; };
-		270B122C1628EA8C005A82FA /* MultipartMessageHeaderField.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E91628EA8C005A82FA /* MultipartMessageHeaderField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270B122D1628EA8C005A82FA /* MultipartMessageHeaderField.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11E91628EA8C005A82FA /* MultipartMessageHeaderField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270B122E1628EA8C005A82FA /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11EA1628EA8C005A82FA /* MultipartMessageHeaderField.m */; };
-		270B122F1628EA8C005A82FA /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11EA1628EA8C005A82FA /* MultipartMessageHeaderField.m */; };
 		270B12301628EA8C005A82FA /* HTTPAsyncFileResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11EC1628EA8C005A82FA /* HTTPAsyncFileResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		270B12311628EA8C005A82FA /* HTTPAsyncFileResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 270B11EC1628EA8C005A82FA /* HTTPAsyncFileResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		270B12321628EA8C005A82FA /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 270B11ED1628EA8C005A82FA /* HTTPAsyncFileResponse.m */; };
@@ -201,12 +189,6 @@
 		270B11E11628EA8C005A82FA /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPResponse.h; path = Core/HTTPResponse.h; sourceTree = "<group>"; };
 		270B11E21628EA8C005A82FA /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HTTPServer.h; path = Core/HTTPServer.h; sourceTree = "<group>"; };
 		270B11E31628EA8C005A82FA /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HTTPServer.m; path = Core/HTTPServer.m; sourceTree = "<group>"; };
-		270B11E51628EA8C005A82FA /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartFormDataParser.h; sourceTree = "<group>"; };
-		270B11E61628EA8C005A82FA /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartFormDataParser.m; sourceTree = "<group>"; };
-		270B11E71628EA8C005A82FA /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeader.h; sourceTree = "<group>"; };
-		270B11E81628EA8C005A82FA /* MultipartMessageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeader.m; sourceTree = "<group>"; };
-		270B11E91628EA8C005A82FA /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeaderField.h; sourceTree = "<group>"; };
-		270B11EA1628EA8C005A82FA /* MultipartMessageHeaderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeaderField.m; sourceTree = "<group>"; };
 		270B11EC1628EA8C005A82FA /* HTTPAsyncFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPAsyncFileResponse.h; sourceTree = "<group>"; };
 		270B11ED1628EA8C005A82FA /* HTTPAsyncFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPAsyncFileResponse.m; sourceTree = "<group>"; };
 		270B11EE1628EA8C005A82FA /* HTTPDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDataResponse.h; sourceTree = "<group>"; };
@@ -306,7 +288,6 @@
 				270B11E11628EA8C005A82FA /* HTTPResponse.h */,
 				270B11E21628EA8C005A82FA /* HTTPServer.h */,
 				270B11E31628EA8C005A82FA /* HTTPServer.m */,
-				270B11E41628EA8C005A82FA /* Mime */,
 				270B11EB1628EA8C005A82FA /* Responses */,
 				270B11F61628EA8C005A82FA /* WebSocket.h */,
 				270B11F71628EA8C005A82FA /* WebSocket.m */,
@@ -327,20 +308,6 @@
 			);
 			name = Categories;
 			path = Core/Categories;
-			sourceTree = "<group>";
-		};
-		270B11E41628EA8C005A82FA /* Mime */ = {
-			isa = PBXGroup;
-			children = (
-				270B11E51628EA8C005A82FA /* MultipartFormDataParser.h */,
-				270B11E61628EA8C005A82FA /* MultipartFormDataParser.m */,
-				270B11E71628EA8C005A82FA /* MultipartMessageHeader.h */,
-				270B11E81628EA8C005A82FA /* MultipartMessageHeader.m */,
-				270B11E91628EA8C005A82FA /* MultipartMessageHeaderField.h */,
-				270B11EA1628EA8C005A82FA /* MultipartMessageHeaderField.m */,
-			);
-			name = Mime;
-			path = Core/Mime;
 			sourceTree = "<group>";
 		};
 		270B11EB1628EA8C005A82FA /* Responses */ = {
@@ -402,9 +369,6 @@
 				270B121B1628EA8C005A82FA /* HTTPMessage.h in Headers */,
 				270B121F1628EA8C005A82FA /* HTTPResponse.h in Headers */,
 				270B12211628EA8C005A82FA /* HTTPServer.h in Headers */,
-				270B12251628EA8C005A82FA /* MultipartFormDataParser.h in Headers */,
-				270B12291628EA8C005A82FA /* MultipartMessageHeader.h in Headers */,
-				270B122D1628EA8C005A82FA /* MultipartMessageHeaderField.h in Headers */,
 				270B12311628EA8C005A82FA /* HTTPAsyncFileResponse.h in Headers */,
 				270B12351628EA8C005A82FA /* HTTPDataResponse.h in Headers */,
 				270B12391628EA8C005A82FA /* HTTPDynamicFileResponse.h in Headers */,
@@ -427,9 +391,6 @@
 				270B121A1628EA8C005A82FA /* HTTPMessage.h in Headers */,
 				270B121E1628EA8C005A82FA /* HTTPResponse.h in Headers */,
 				270B12201628EA8C005A82FA /* HTTPServer.h in Headers */,
-				270B12241628EA8C005A82FA /* MultipartFormDataParser.h in Headers */,
-				270B12281628EA8C005A82FA /* MultipartMessageHeader.h in Headers */,
-				270B122C1628EA8C005A82FA /* MultipartMessageHeaderField.h in Headers */,
 				270B12301628EA8C005A82FA /* HTTPAsyncFileResponse.h in Headers */,
 				270B12341628EA8C005A82FA /* HTTPDataResponse.h in Headers */,
 				270B12381628EA8C005A82FA /* HTTPDynamicFileResponse.h in Headers */,
@@ -606,9 +567,6 @@
 				270B12161628EA8C005A82FA /* HTTPConnection.m in Sources */,
 				270B121C1628EA8C005A82FA /* HTTPMessage.m in Sources */,
 				270B12221628EA8C005A82FA /* HTTPServer.m in Sources */,
-				270B12261628EA8C005A82FA /* MultipartFormDataParser.m in Sources */,
-				270B122A1628EA8C005A82FA /* MultipartMessageHeader.m in Sources */,
-				270B122E1628EA8C005A82FA /* MultipartMessageHeaderField.m in Sources */,
 				270B12321628EA8C005A82FA /* HTTPAsyncFileResponse.m in Sources */,
 				270B12361628EA8C005A82FA /* HTTPDataResponse.m in Sources */,
 				270B123A1628EA8C005A82FA /* HTTPDynamicFileResponse.m in Sources */,
@@ -629,9 +587,6 @@
 				270B12171628EA8C005A82FA /* HTTPConnection.m in Sources */,
 				270B121D1628EA8C005A82FA /* HTTPMessage.m in Sources */,
 				270B12231628EA8C005A82FA /* HTTPServer.m in Sources */,
-				270B12271628EA8C005A82FA /* MultipartFormDataParser.m in Sources */,
-				270B122B1628EA8C005A82FA /* MultipartMessageHeader.m in Sources */,
-				270B122F1628EA8C005A82FA /* MultipartMessageHeaderField.m in Sources */,
 				270B12331628EA8C005A82FA /* HTTPAsyncFileResponse.m in Sources */,
 				270B12371628EA8C005A82FA /* HTTPDataResponse.m in Sources */,
 				270B123B1628EA8C005A82FA /* HTTPDynamicFileResponse.m in Sources */,
