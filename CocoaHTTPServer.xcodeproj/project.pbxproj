@@ -89,6 +89,18 @@
 		27C38CBE162B97C8006E831C /* License-CocoaHTTPServer.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CB8162B97BC006E831C /* License-CocoaHTTPServer.txt */; };
 		27C38CBF162B97C8006E831C /* License.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CB9162B97BC006E831C /* License.txt */; };
 		27C38CC0162B97C8006E831C /* Version in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27C38CBA162B97BC006E831C /* Version */; };
+		27D1C360162E344100CA0018 /* MultipartFormDataParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D1C35A162E344100CA0018 /* MultipartFormDataParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D1C361162E344100CA0018 /* MultipartFormDataParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D1C35A162E344100CA0018 /* MultipartFormDataParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D1C362162E344100CA0018 /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1C35B162E344100CA0018 /* MultipartFormDataParser.m */; };
+		27D1C363162E344100CA0018 /* MultipartFormDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1C35B162E344100CA0018 /* MultipartFormDataParser.m */; };
+		27D1C364162E344100CA0018 /* MultipartMessageHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D1C35C162E344100CA0018 /* MultipartMessageHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D1C365162E344100CA0018 /* MultipartMessageHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D1C35C162E344100CA0018 /* MultipartMessageHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D1C366162E344100CA0018 /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1C35D162E344100CA0018 /* MultipartMessageHeader.m */; };
+		27D1C367162E344100CA0018 /* MultipartMessageHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1C35D162E344100CA0018 /* MultipartMessageHeader.m */; };
+		27D1C368162E344100CA0018 /* MultipartMessageHeaderField.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D1C35E162E344100CA0018 /* MultipartMessageHeaderField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D1C369162E344100CA0018 /* MultipartMessageHeaderField.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D1C35E162E344100CA0018 /* MultipartMessageHeaderField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27D1C36A162E344100CA0018 /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1C35F162E344100CA0018 /* MultipartMessageHeaderField.m */; };
+		27D1C36B162E344100CA0018 /* MultipartMessageHeaderField.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D1C35F162E344100CA0018 /* MultipartMessageHeaderField.m */; };
 		27D481E6162E32FE003FA4D2 /* DAVConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D481DE162E32FE003FA4D2 /* DAVConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27D481E7162E32FE003FA4D2 /* DAVConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D481DE162E32FE003FA4D2 /* DAVConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27D481E8162E32FE003FA4D2 /* DAVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D481DF162E32FE003FA4D2 /* DAVConnection.m */; };
@@ -224,6 +236,12 @@
 		27C38CB8162B97BC006E831C /* License-CocoaHTTPServer.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "License-CocoaHTTPServer.txt"; sourceTree = "<group>"; };
 		27C38CB9162B97BC006E831C /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		27C38CBA162B97BC006E831C /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
+		27D1C35A162E344100CA0018 /* MultipartFormDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartFormDataParser.h; sourceTree = "<group>"; };
+		27D1C35B162E344100CA0018 /* MultipartFormDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartFormDataParser.m; sourceTree = "<group>"; };
+		27D1C35C162E344100CA0018 /* MultipartMessageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeader.h; sourceTree = "<group>"; };
+		27D1C35D162E344100CA0018 /* MultipartMessageHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeader.m; sourceTree = "<group>"; };
+		27D1C35E162E344100CA0018 /* MultipartMessageHeaderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipartMessageHeaderField.h; sourceTree = "<group>"; };
+		27D1C35F162E344100CA0018 /* MultipartMessageHeaderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipartMessageHeaderField.m; sourceTree = "<group>"; };
 		27D481DE162E32FE003FA4D2 /* DAVConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAVConnection.h; sourceTree = "<group>"; };
 		27D481DF162E32FE003FA4D2 /* DAVConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAVConnection.m; sourceTree = "<group>"; };
 		27D481E0162E32FE003FA4D2 /* DAVResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAVResponse.h; sourceTree = "<group>"; };
@@ -308,6 +326,7 @@
 			children = (
 				270B11D31628EA8C005A82FA /* Categories */,
 				27D481DD162E32FE003FA4D2 /* WebDAV */,
+				27D1C359162E344100CA0018 /* Mime */,
 				270B11DA1628EA8C005A82FA /* HTTPAuthenticationRequest.h */,
 				270B11DB1628EA8C005A82FA /* HTTPAuthenticationRequest.m */,
 				270B11DC1628EA8C005A82FA /* HTTPConnection.h */,
@@ -386,6 +405,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		27D1C359162E344100CA0018 /* Mime */ = {
+			isa = PBXGroup;
+			children = (
+				27D1C35A162E344100CA0018 /* MultipartFormDataParser.h */,
+				27D1C35B162E344100CA0018 /* MultipartFormDataParser.m */,
+				27D1C35C162E344100CA0018 /* MultipartMessageHeader.h */,
+				27D1C35D162E344100CA0018 /* MultipartMessageHeader.m */,
+				27D1C35E162E344100CA0018 /* MultipartMessageHeaderField.h */,
+				27D1C35F162E344100CA0018 /* MultipartMessageHeaderField.m */,
+			);
+			name = Mime;
+			path = Core/Mime;
+			sourceTree = "<group>";
+		};
 		27D481DD162E32FE003FA4D2 /* WebDAV */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +461,9 @@
 				27D481EB162E32FE003FA4D2 /* DAVResponse.h in Headers */,
 				27D481EF162E32FE003FA4D2 /* DELETEResponse.h in Headers */,
 				27D481F3162E32FE003FA4D2 /* PUTResponse.h in Headers */,
+				27D1C361162E344100CA0018 /* MultipartFormDataParser.h in Headers */,
+				27D1C365162E344100CA0018 /* MultipartMessageHeader.h in Headers */,
+				27D1C369162E344100CA0018 /* MultipartMessageHeaderField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +490,9 @@
 				27D481EA162E32FE003FA4D2 /* DAVResponse.h in Headers */,
 				27D481EE162E32FE003FA4D2 /* DELETEResponse.h in Headers */,
 				27D481F2162E32FE003FA4D2 /* PUTResponse.h in Headers */,
+				27D1C360162E344100CA0018 /* MultipartFormDataParser.h in Headers */,
+				27D1C364162E344100CA0018 /* MultipartMessageHeader.h in Headers */,
+				27D1C368162E344100CA0018 /* MultipartMessageHeaderField.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +673,9 @@
 				27D481EC162E32FE003FA4D2 /* DAVResponse.m in Sources */,
 				27D481F0162E32FE003FA4D2 /* DELETEResponse.m in Sources */,
 				27D481F4162E32FE003FA4D2 /* PUTResponse.m in Sources */,
+				27D1C362162E344100CA0018 /* MultipartFormDataParser.m in Sources */,
+				27D1C366162E344100CA0018 /* MultipartMessageHeader.m in Sources */,
+				27D1C36A162E344100CA0018 /* MultipartMessageHeaderField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +700,9 @@
 				27D481ED162E32FE003FA4D2 /* DAVResponse.m in Sources */,
 				27D481F1162E32FE003FA4D2 /* DELETEResponse.m in Sources */,
 				27D481F5162E32FE003FA4D2 /* PUTResponse.m in Sources */,
+				27D1C363162E344100CA0018 /* MultipartFormDataParser.m in Sources */,
+				27D1C367162E344100CA0018 /* MultipartMessageHeader.m in Sources */,
+				27D1C36B162E344100CA0018 /* MultipartMessageHeaderField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
