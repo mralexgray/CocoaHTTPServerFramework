@@ -579,7 +579,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 {
 	HTTPLogTrace();
 	
-	NSAssert(dispatch_get_current_queue() == serverQueue, @"Invalid queue");
+	NSAssert(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) == serverQueue, @"Invalid queue");
 	
 	if (type)
 	{
@@ -614,7 +614,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 {
 	HTTPLogTrace();
 	
-	NSAssert(dispatch_get_current_queue() == serverQueue, @"Invalid queue");
+	NSAssert(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) == serverQueue, @"Invalid queue");
 	
 	if (netService)
 	{
