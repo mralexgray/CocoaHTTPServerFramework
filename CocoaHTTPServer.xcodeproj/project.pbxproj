@@ -126,6 +126,9 @@
 		D5FE35BE163AF6910090BB94 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE35A6163AF5A50090BB94 /* CFNetwork.framework */; };
 		D5FE35BF163AF6A30090BB94 /* libCocoaAsyncSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B127C1628EB33005A82FA /* libCocoaAsyncSocket.a */; };
 		D5FE35E5163AF78D0090BB94 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE35A9163AF5B20090BB94 /* SenTestingKit.framework */; };
+		D5FE3683163AFCF70090BB94 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3682163AFCF70090BB94 /* UIKit.framework */; };
+		D5FE3685163AFCFC0090BB94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3684163AFCFC0090BB94 /* CoreGraphics.framework */; };
+		D5FE3687163AFD020090BB94 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FE3686163AFD020090BB94 /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -303,6 +306,9 @@
 		D5FE35AC163AF5BE0090BB94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D5FE35B2163AF60A0090BB94 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		D5FE35B4163AF6110090BB94 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
+		D5FE3682163AFCF70090BB94 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D5FE3684163AFCFC0090BB94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D5FE3686163AFD020090BB94 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +335,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FE3687163AFD020090BB94 /* libxml2.dylib in Frameworks */,
+				D5FE3685163AFCFC0090BB94 /* CoreGraphics.framework in Frameworks */,
+				D5FE3683163AFCF70090BB94 /* UIKit.framework in Frameworks */,
 				D5FE35AF163AF5EC0090BB94 /* SenTestingKit.framework in Frameworks */,
 				D5FE35A2163AF5630090BB94 /* libCocoaHTTPServer.a in Frameworks */,
 				D5FE35BE163AF6910090BB94 /* CFNetwork.framework in Frameworks */,
@@ -520,6 +529,9 @@
 		D5FE35AE163AF5CA0090BB94 /* iOS-Testing */ = {
 			isa = PBXGroup;
 			children = (
+				D5FE3686163AFD020090BB94 /* libxml2.dylib */,
+				D5FE3684163AFCFC0090BB94 /* CoreGraphics.framework */,
+				D5FE3682163AFCF70090BB94 /* UIKit.framework */,
 				D5FE35A6163AF5A50090BB94 /* CFNetwork.framework */,
 				D5FE35AC163AF5BE0090BB94 /* Security.framework */,
 			);
@@ -1113,6 +1125,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1132,6 +1145,7 @@
 					"$(inherited)",
 					"\"$(SDKROOT)/usr/lib/system\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
