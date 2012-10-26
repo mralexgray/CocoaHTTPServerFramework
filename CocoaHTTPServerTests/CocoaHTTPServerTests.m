@@ -21,6 +21,7 @@
 - (void)testExample
 {
     HTTPServer * m = [HTTPServer new];
+    m = nil;
 }
 
 @end
