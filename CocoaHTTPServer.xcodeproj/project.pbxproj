@@ -178,6 +178,20 @@
 			remoteGlobalIDString = 2765C6CC161CCD2B00E21ECB;
 			remoteInfo = CocoaLumberjackOSX;
 		};
+		D5291E7D1639D9C10017DB63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 271173A41634CCB20077D393;
+			remoteInfo = CocoaLumberjackIOSTests;
+		};
+		D5291E7F1639D9C10017DB63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27698880162B6A3700E0D45E /* CocoaLumberjack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 271173CF1634CE850077D393;
+			remoteInfo = CocoaLumberjackOSXTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -401,6 +415,8 @@
 			children = (
 				27698887162B6A3700E0D45E /* libCocoaLumberjack.a */,
 				27698889162B6A3700E0D45E /* CocoaLumberjack.framework */,
+				D5291E7E1639D9C10017DB63 /* CocoaLumberjackIOSTests.octest */,
+				D5291E801639D9C10017DB63 /* CocoaLumberjackOSXTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -605,6 +621,20 @@
 			remoteRef = 27698888162B6A3700E0D45E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		D5291E7E1639D9C10017DB63 /* CocoaLumberjackIOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CocoaLumberjackIOSTests.octest;
+			remoteRef = D5291E7D1639D9C10017DB63 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D5291E801639D9C10017DB63 /* CocoaLumberjackOSXTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CocoaLumberjackOSXTests.octest;
+			remoteRef = D5291E7F1639D9C10017DB63 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -736,10 +766,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv6,
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -760,8 +786,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
@@ -774,10 +800,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					"$(ARCHS_STANDARD_32_BIT)",
-					armv6,
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -791,8 +813,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = "$(PROJECT_NAME)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
