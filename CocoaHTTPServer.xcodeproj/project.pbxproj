@@ -1052,7 +1052,6 @@
 		270B119F1628E5A8005A82FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)PrivateHeaders";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)Headers";
 			};
@@ -1061,7 +1060,6 @@
 		270B11A01628E5A8005A82FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
 				PRIVATE_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)PrivateHeaders";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(PRODUCT_NAME)Headers";
 			};
