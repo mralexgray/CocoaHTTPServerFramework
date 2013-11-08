@@ -115,6 +115,7 @@
 		27D481F3162E32FE003FA4D2 /* PUTResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 27D481E4162E32FE003FA4D2 /* PUTResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27D481F4162E32FE003FA4D2 /* PUTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D481E5162E32FE003FA4D2 /* PUTResponse.m */; };
 		27D481F5162E32FE003FA4D2 /* PUTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D481E5162E32FE003FA4D2 /* PUTResponse.m */; };
+		7BBD9D59182C8C87007395D5 /* CocoaHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBD9D58182C8C87007395D5 /* CocoaHTTPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5FE357E163AF4870090BB94 /* CocoaHTTPServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FE357D163AF4870090BB94 /* CocoaHTTPServerTests.m */; };
 		D5FE357F163AF4870090BB94 /* CocoaHTTPServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5FE357D163AF4870090BB94 /* CocoaHTTPServerTests.m */; };
 		D5FE35A2163AF5630090BB94 /* libCocoaHTTPServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 270B11901628E5A8005A82FA /* libCocoaHTTPServer.a */; };
@@ -245,6 +246,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BBD9D5F182C8FBA007395D5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -297,6 +307,7 @@
 		27D481E3162E32FE003FA4D2 /* DELETEResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DELETEResponse.m; sourceTree = "<group>"; };
 		27D481E4162E32FE003FA4D2 /* PUTResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUTResponse.h; sourceTree = "<group>"; };
 		27D481E5162E32FE003FA4D2 /* PUTResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUTResponse.m; sourceTree = "<group>"; };
+		7BBD9D58182C8C87007395D5 /* CocoaHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaHTTPServer.h; sourceTree = "<group>"; };
 		D5FE353F163AF4240090BB94 /* CocoaHTTPServerIOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaHTTPServerIOSTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FE3557163AF4370090BB94 /* CocoaHTTPServerOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaHTTPServerOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FE357C163AF4870090BB94 /* CocoaHTTPServerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaHTTPServerTests.h; sourceTree = "<group>"; };
@@ -405,6 +416,7 @@
 				270B11E01628EA8C005A82FA /* HTTPMessage.m */,
 				270B11E11628EA8C005A82FA /* HTTPResponse.h */,
 				270B11E21628EA8C005A82FA /* HTTPServer.h */,
+				7BBD9D58182C8C87007395D5 /* CocoaHTTPServer.h */,
 				270B11E31628EA8C005A82FA /* HTTPServer.m */,
 				270B11EB1628EA8C005A82FA /* Responses */,
 				270B11F61628EA8C005A82FA /* WebSocket.h */,
@@ -562,6 +574,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBD9D59182C8C87007395D5 /* CocoaHTTPServer.h in Headers */,
 				270B12051628EA8C005A82FA /* DDData.h in Headers */,
 				270B12091628EA8C005A82FA /* DDNumber.h in Headers */,
 				270B120D1628EA8C005A82FA /* DDRange.h in Headers */,
@@ -647,6 +660,7 @@
 				270B11AE1628E676005A82FA /* Frameworks */,
 				270B11AF1628E676005A82FA /* Headers */,
 				270B11B01628E676005A82FA /* Resources */,
+				7BBD9D5F182C8FBA007395D5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1082,7 +1096,11 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-sub_umbrella",
+					CocoaAsyncSocket,
+				);
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1094,7 +1112,11 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-sub_umbrella",
+					CocoaAsyncSocket,
+				);
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
