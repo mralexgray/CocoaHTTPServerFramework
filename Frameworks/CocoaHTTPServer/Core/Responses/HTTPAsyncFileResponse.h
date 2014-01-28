@@ -1,4 +1,4 @@
-#import <Foundation/Foundation.h>
+
 #import "HTTPResponse.h"
 
 @class HTTPConnection;

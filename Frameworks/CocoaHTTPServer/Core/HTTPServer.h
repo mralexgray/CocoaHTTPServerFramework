@@ -1,7 +1,4 @@
-#import <Foundation/Foundation.h>
 
-@class GCDAsyncSocket;
-@class WebSocket;
 
 #if TARGET_OS_IPHONE
   #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 40000 // iPhone 4.0
@@ -17,37 +14,33 @@
   #endif
 #endif
 
-
+@class									GCDAsyncSocket, WebSocket;
 @interface HTTPServer : NSObject IMPLEMENTED_PROTOCOLS
 {
-	// Underlying asynchronous TCP/IP socket
-	GCDAsyncSocket *asyncSocket;
+	GCDAsyncSocket *asyncSocket;						// Underlying asynchronous TCP/IP socket
+
+	dispatch_queue_t serverQueue,						// Dispatch queues
+									 connectionQueue;
+	void *IsOnServerQueueKey,
+			 * IsOnConnectionQueueKey;
 	
-	// Dispatch queues
-	dispatch_queue_t serverQueue;
-	dispatch_queue_t connectionQueue;
-	void *IsOnServerQueueKey;
-	void *IsOnConnectionQueueKey;
-	
-	// HTTP server configuration
-	NSString *documentRoot;
+	NSString * documentRoot,									// HTTP server configuration
+					 * interface;
 	Class connectionClass;
-	NSString *interface;
 	UInt16 port;
 	
-	// NSNetService and related variables
-	NSNetService *netService;
-	NSString *domain;
-	NSString *type;
-	NSString *name;
-	NSString *publishedName;
+	NSNetService *netService;								// NSNetService and related variables
+	NSString * domain,
+					 * type,
+					 * name,
+					 * publishedName;
 	NSDictionary *txtRecordDictionary;
 	
 	// Connection management
-	NSMutableArray *connections;
-	NSMutableArray *webSockets;
-	NSLock *connectionsLock;
-	NSLock *webSocketsLock;
+	NSMutableArray * connections,
+								 * webSockets;
+	NSLock * connectionsLock,
+	       * webSocketsLock;
 	
 	BOOL isRunning;
 }
@@ -63,8 +56,7 @@
  * If you change the documentRoot while the server is running,
  * the change will affect future incoming http connections.
 **/
-- (NSString *)documentRoot;
-- (void)setDocumentRoot:(NSString *)value;
+@property (nonatomic) NSString * documentRoot;
 
 /**
  * The connection class is the class used to handle incoming HTTP connections.
@@ -75,8 +67,7 @@
  * If you change the connectionClass while the server is running,
  * the change will affect future incoming http connections.
 **/
-- (Class)connectionClass;
-- (void)setConnectionClass:(Class)value;
+@property (nonatomic) Class connectionClass;
 
 /**
  * Set what interface you'd like the server to listen on.
@@ -86,8 +77,7 @@
  * You may also use the special strings "localhost" or "loopback" to specify that
  * the socket only accept connections from the local machine.
 **/
-- (NSString *)interface;
-- (void)setInterface:(NSString *)value;
+@property (nonatomic) NSString *interface;
 
 /**
  * The port number to run the HTTP server on.
@@ -104,9 +94,8 @@
  * The listeningPort method will always return the port number the running server is listening for connections on.
  * If the server is not running this method returns 0.
 **/
-- (UInt16)port;
-- (UInt16)listeningPort;
-- (void)setPort:(UInt16)value;
+@property (nonatomic)  UInt16 port;
+@property (readonly) UInt16 listeningPort;
 
 /**
  * Bonjour domain for publishing the service.
@@ -117,8 +106,7 @@
  * If you change the domain property after the bonjour service has already been published (server already started),
  * you'll need to invoke the republishBonjour method to update the broadcasted bonjour service.
 **/
-- (NSString *)domain;
-- (void)setDomain:(NSString *)value;
+@property (nonatomic) NSString *domain;
 
 /**
  * Bonjour name for publishing the service.
@@ -137,9 +125,8 @@
  * The publishedName method will always return the actual name that was published via the bonjour service.
  * If the service is not running this method returns nil.
 **/
-- (NSString *)name;
-- (NSString *)publishedName;
-- (void)setName:(NSString *)value;
+@property (nonatomic) NSString *name;
+@property (readonly) NSString *publishedName;
 
 /**
  * Bonjour type for publishing the service.
@@ -151,8 +138,7 @@
  * If you change the type after the bonjour service has already been published (server already started),
  * you'll need to invoke the republishBonjour method to update the broadcasted bonjour service.
 **/
-- (NSString *)type;
-- (void)setType:(NSString *)value;
+@property (nonatomic) NSString *type;
 
 /**
  * Republishes the service via bonjour if the server is running.
@@ -163,8 +149,7 @@
 /**
  * 
 **/
-- (NSDictionary *)TXTRecordDictionary;
-- (void)setTXTRecordDictionary:(NSDictionary *)dict;
+@property (nonatomic)  NSDictionary *TXTRecordDictionary;
 
 /**
  * Attempts to starts the server on the configured port, interface, etc.
@@ -195,11 +180,11 @@
 - (void)stop;
 - (void)stop:(BOOL)keepExistingConnections;
 
-- (BOOL)isRunning;
+@property (readonly) BOOL isRunning;
 
 - (void)addWebSocket:(WebSocket *)ws;
 
-- (NSUInteger)numberOfHTTPConnections;
-- (NSUInteger)numberOfWebSocketConnections;
+@property (readonly) NSUInteger numberOfHTTPConnections,
+                                numberOfWebSocketConnections;
 
 @end

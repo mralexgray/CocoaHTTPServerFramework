@@ -8,8 +8,11 @@
  * All effort is given such that DDRange functions EXACTLY the same as NSRange.
 **/
 
-#import <Foundation/NSValue.h>
-#import <Foundation/NSObjCRuntime.h>
+//#import <Foundation/NSValue.h>
+//#import <Foundation/NSObjCRuntime.h>
+
+@import Foundation;
+
 
 @class NSString;
 

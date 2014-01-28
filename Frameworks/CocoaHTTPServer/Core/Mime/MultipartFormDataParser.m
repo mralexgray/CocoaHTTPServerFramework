@@ -24,13 +24,14 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 
 
 @interface MultipartFormDataParser (private)
-+ (NSData*) decodedDataFromData:(NSData*) data encoding:(int) encoding;
 
-- (int) findHeaderEnd:(NSData*) workingData fromOffset:(int) offset;
-- (int) findContentEnd:(NSData*) data fromOffset:(int) offset;
++ (NSData*) decodedDataFromData:(NSData*) data encoding:(int)encoding;
 
-- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(NSUInteger) length encoding:(int) encoding;
-- (int) offsetTillNewlineSinceOffset:(int) offset inData:(NSData*) data;
+- (int) findHeaderEnd:	(NSData*)workingData fromOffset:(int)offset;
+- (int) findContentEnd:	(NSData*)data				 fromOffset:(int)offset;
+
+- (int) numberOfBytesToLeavePendingWithData:(NSData*)data length:(int)length encoding:(int)encoding;
+- (int) offsetTillNewlineSinceOffset:				(int)offset		inData:(NSData*) data;
 
 - (int) processPreamble:(NSData*) workingData;
 
@@ -244,10 +245,10 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 			// this case, we didn't find the boundary, so the data is related to the current part.
 			// we leave the sizeToLeavePending amount of bytes to make sure we don't include 
 			// boundary part in processed data.
-			NSUInteger sizeToPass = workingData.length - offset - sizeToLeavePending;
+			NSInteger sizeToPass = workingData.length - offset - sizeToLeavePending;
 
 			// if we parse BASE64 encoded data, or Quoted-Printable data, we will make sure we don't break the format
-			int leaveTrailing = [self numberOfBytesToLeavePendingWithData:data length:sizeToPass encoding:currentEncoding];
+			NSInteger leaveTrailing = [self numberOfBytesToLeavePendingWithData:data length:(int)sizeToPass encoding:currentEncoding];
 			sizeToPass -= leaveTrailing;
 			
 			if( sizeToPass <= 0 ) {
@@ -425,11 +426,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 	if( encoding == contentTransferEncoding_base64 ) {	
 		char* bytes = (char*) data.bytes;
 		int i;
-		for( i = length - 1; i > 0; i++ ) {
-			if( * (uint16_t*) (bytes + i) == 0x0A0D ) {
-				break;
-			}
-		}
+		for( i = length - 1; i > 0; i++ ) if( * (uint16_t*) (bytes + i) == 0x0A0D ) break;
 		// now we've got to be sure that the length of passed data since last line
 		// is multiplier of 4.
 		sizeToLeavePending = (length - i) & ~0x11; // size to leave pending = length-i - (length-i) %4;

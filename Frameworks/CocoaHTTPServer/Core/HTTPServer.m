@@ -24,9 +24,6 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 
 @end
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @implementation HTTPServer
 
@@ -34,69 +31,66 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
  * Standard Constructor.
  * Instantiates an HTTP server, but does not start it.
 **/
-- (id)init
-{
-	if ((self = [super init]))
-	{
-		HTTPLogTrace();
-		
-		// Setup underlying dispatch queues
-		serverQueue = dispatch_queue_create("HTTPServer", NULL);
-		connectionQueue = dispatch_queue_create("HTTPConnection", NULL);
-		
-		IsOnServerQueueKey = &IsOnServerQueueKey;
-		IsOnConnectionQueueKey = &IsOnConnectionQueueKey;
-		
-		void *nonNullUnusedPointer = (__bridge void *)self; // Whatever, just not null
-		
-		dispatch_queue_set_specific(serverQueue, IsOnServerQueueKey, nonNullUnusedPointer, NULL);
-		dispatch_queue_set_specific(connectionQueue, IsOnConnectionQueueKey, nonNullUnusedPointer, NULL);
-		
-		// Initialize underlying GCD based tcp socket
-		asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:serverQueue];
-		
-		// Use default connection class of HTTPConnection
-		connectionClass = [HTTPConnection self];
-		
-		// By default bind on all available interfaces, en1, wifi etc
-		interface = nil;
-		
-		// Use a default port of 0
-		// This will allow the kernel to automatically pick an open port for us
-		port = 0;
-		
-		// Configure default values for bonjour service
-		
-		// Bonjour domain. Use the local domain by default
-		domain = @"local.";
-		
-		// If using an empty string ("") for the service name when registering,
-		// the system will automatically use the "Computer Name".
-		// Passing in an empty string will also handle name conflicts
-		// by automatically appending a digit to the end of the name.
-		name = @"";
-		
-		// Initialize arrays to hold all the HTTP and webSocket connections
-		connections = [[NSMutableArray alloc] init];
-		webSockets  = [[NSMutableArray alloc] init];
-		
-		connectionsLock = [[NSLock alloc] init];
-		webSocketsLock  = [[NSLock alloc] init];
-		
-		// Register for notifications of closed connections
-		[[NSNotificationCenter defaultCenter] addObserver:self
-		                                         selector:@selector(connectionDidDie:)
-		                                             name:HTTPConnectionDidDieNotification
-		                                           object:nil];
-		
-		// Register for notifications of closed websocket connections
-		[[NSNotificationCenter defaultCenter] addObserver:self
-		                                         selector:@selector(webSocketDidDie:)
-		                                             name:WebSocketDidDieNotification
-		                                           object:nil];
-		
-		isRunning = NO;
-	}
+- (id)init {
+
+	if (self != [super init]) return nil;
+	HTTPLogTrace();
+
+	// Setup underlying dispatch queues
+	serverQueue = dispatch_queue_create("HTTPServer", NULL);
+	connectionQueue = dispatch_queue_create("HTTPConnection", NULL);
+	
+	IsOnServerQueueKey = &IsOnServerQueueKey;
+	IsOnConnectionQueueKey = &IsOnConnectionQueueKey;
+	
+	void *nonNullUnusedPointer = (__bridge void *)self; // Whatever, just not null
+	
+	dispatch_queue_set_specific(serverQueue, IsOnServerQueueKey, nonNullUnusedPointer, NULL);
+	dispatch_queue_set_specific(connectionQueue, IsOnConnectionQueueKey, nonNullUnusedPointer, NULL);
+	
+	// Initialize underlying GCD based tcp socket
+	asyncSocket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:serverQueue];
+	
+	// Use default connection class of HTTPConnection
+	connectionClass = [HTTPConnection self];
+	
+	// By default bind on all available interfaces, en1, wifi etc
+	interface = nil;
+	
+	// Use a default port of 0
+	// This will allow the kernel to automatically pick an open port for us
+	port = 0;
+	
+	// Configure default values for bonjour service
+	
+	// Bonjour domain. Use the local domain by default
+	domain = @"local.";
+	
+	// If using an empty string ("") for the service name when registering,
+	// the system will automatically use the "Computer Name".
+	// Passing in an empty string will also handle name conflicts
+	// by automatically appending a digit to the end of the name.
+	name = @"";
+	
+	// Initialize arrays to hold all the HTTP and webSocket connections
+	connections = NSMutableArray.new;
+	webSockets  = NSMutableArray.new;
+	
+	connectionsLock = NSLock.new;
+	webSocketsLock  = NSLock.new;
+	
+	// Register for notifications of closed connections
+	[NSNotificationCenter.defaultCenter addObserver:self
+																				 selector:@selector(connectionDidDie:)
+																						 name:HTTPConnectionDidDieNotification
+																					 object:nil];
+	
+	// Register for notifications of closed websocket connections
+	[NSNotificationCenter.defaultCenter addObserver:self
+																				 selector:@selector(webSocketDidDie:)
+																						 name:WebSocketDidDieNotification
+																					 object:nil];
+	isRunning = NO;
 	return self;
 }
 
@@ -109,7 +103,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 	HTTPLogTrace();
 	
 	// Remove notification observer
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	[NSNotificationCenter.defaultCenter removeObserver:self];
 	
 	// Stop the server if it's running
 	[self stop];
@@ -144,26 +138,16 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 	return result;
 }
 
-- (void)setDocumentRoot:(NSString *)value
-{
-	HTTPLogTrace();
-	
+- (void)setDocumentRoot:(NSString *)value {	HTTPLogTrace();
+
 	// Document root used to be of type NSURL.
 	// Add type checking for early warning to developers upgrading from older versions.
-	
-	if (value && ![value isKindOfClass:[NSString class]])
-	{
+	if (value && ![value isKindOfClass:NSString.class])	{
+
 		HTTPLogWarn(@"%@: %@ - Expecting NSString parameter, received %@ parameter",
-					THIS_FILE, THIS_METHOD, NSStringFromClass([value class]));
-		return;
+								THIS_FILE, THIS_METHOD, NSStringFromClass([value class]));	return;
 	}
-	
-	NSString *valueCopy = [value copy];
-	
-	dispatch_async(serverQueue, ^{
-		documentRoot = valueCopy;
-	});
-	
+	NSString *valueCopy = [value copy];	dispatch_async(serverQueue, ^{ documentRoot = valueCopy; });
 }
 
 /**
@@ -172,24 +156,15 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
  * The default connection class is HTTPConnection.
  * If you use a different connection class, it is assumed that the class extends HTTPConnection
 **/
-- (Class)connectionClass
-{
-	__block Class result;
+- (Class)connectionClass {	__block Class result;
 	
-	dispatch_sync(serverQueue, ^{
-		result = connectionClass;
-	});
-	
+	dispatch_sync(serverQueue, ^{	result = connectionClass;	});
 	return result;
 }
 
-- (void)setConnectionClass:(Class)value
-{
-	HTTPLogTrace();
+- (void)setConnectionClass:(Class)value {	HTTPLogTrace();
 	
-	dispatch_async(serverQueue, ^{
-		connectionClass = value;
-	});
+	dispatch_async(serverQueue, ^{ connectionClass = value;	});
 }
 
 /**
@@ -198,16 +173,12 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_INFO; // | HTTP_LOG_FLAG_TRACE;
 - (NSString *)interface
 {
 	__block NSString *result;
-	
-	dispatch_sync(serverQueue, ^{
-		result = interface;
-	});
-	
+	dispatch_sync(serverQueue, ^{	result = interface;	});
 	return result;
 }
 
-- (void)setInterface:(NSString *)value
-{
+- (void)setInterface:(NSString *)value {
+
 	NSString *valueCopy = [value copy];
 	
 	dispatch_async(serverQueue, ^{

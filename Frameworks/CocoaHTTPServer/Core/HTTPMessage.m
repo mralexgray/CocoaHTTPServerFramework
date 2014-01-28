@@ -7,37 +7,24 @@
 
 @implementation HTTPMessage
 
-- (id)initEmptyRequest
-{
-	if ((self = [super init]))
-	{
-		message = CFHTTPMessageCreateEmpty(NULL, YES);
-	}
-	return self;
-}
++   (instancetype) emptyRequest { return [self.alloc initEmptyRequest]; }
 
-- (id)initRequestWithMethod:(NSString *)method URL:(NSURL *)url version:(NSString *)version
-{
-	if ((self = [super init]))
-	{
-		message = CFHTTPMessageCreateRequest(NULL,
+- (id)initEmptyRequest { return self = super.init ? message = CFHTTPMessageCreateEmpty(NULL, YES), self : nil; }
+
+- (id)initRequestWithMethod:(NSString *)method URL:(NSURL *)url version:(NSString *)version {
+
+	return self = super.init ? message = CFHTTPMessageCreateRequest(NULL,
 		                                    (__bridge CFStringRef)method,
 		                                    (__bridge CFURLRef)url,
-		                                    (__bridge CFStringRef)version);
-	}
-	return self;
+		                                    (__bridge CFStringRef)version), self : nil;
 }
 
-- (id)initResponseWithStatusCode:(NSInteger)code description:(NSString *)description version:(NSString *)version
-{
-	if ((self = [super init]))
-	{
-		message = CFHTTPMessageCreateResponse(NULL,
+- (id)initResponseWithStatusCode:(NSInteger)code description:(NSString *)description version:(NSString *)version {
+
+	return self = super.init ? message = CFHTTPMessageCreateResponse(NULL,
 		                                      (CFIndex)code,
 		                                      (__bridge CFStringRef)description,
-		                                      (__bridge CFStringRef)version);
-	}
-	return self;
+		                                      (__bridge CFStringRef)version), self : nil;
 }
 
 - (void)dealloc
@@ -109,5 +96,9 @@
 {
 	CFHTTPMessageSetBody(message, (__bridge CFDataRef)body);
 }
+
+- (NSString*) objectForKeyedSubscript:(NSString*)field; { return [self headerField:field]; }
+
+- (void)setObject:(NSString*)headerValue forKeyedSubscript:(id <NSCopying>)field { [self setHeaderField:(NSString*)field value:headerValue]; }
 
 @end

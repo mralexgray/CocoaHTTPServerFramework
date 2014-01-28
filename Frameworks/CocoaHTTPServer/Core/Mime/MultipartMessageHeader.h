@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 LLC "Online Publishing Partners" (onlinepp.ru). All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+
 
 
 //-----------------------------------------------------------------
